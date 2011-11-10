@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>RadioGaGa</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+	<meta name="author" content="Luka Cvrk (www.solucija.com)" />
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-2" />
+</head>
+<body>
+	<div class="content">
+		<div class="header_right">
+			<div class="top_info">
+				<div class="top_info_right">
+					<p><b>You are not Logged in!</b> <a href="#">Log in</a>  or <a href="#">register</a> to start downloading music!</p>					
+				</div>		
+			</div>
+					
+			<div class="bar">
+				<ul>
+					<li class="slogan">Search Categories:</li>
+					<li><a href="#" accesskey="b">Bands</a></li>
+					<li><a href="#" accesskey="a">Artists</a></li>
+					<li class="active">Music</li>
+					<li><a href="#" accesskey="p">Pictures</a></li>
+					<li><a href="#" accesskey="g">Gigs</a></li>
+				
+				</ul>
+			</div>
+		</div>
+			
+		<div class="logo">
+			<h1><a href="#" title="The best music on the net!">Internet <span class="red">Music</span></a></h1>
+			<p>What shall we play today?</p>
+		</div>
+		
+		<div class="search_field">
+			<form method="post" action="?">
+				<p><span class="grey">Search Example:</span> <span class="search">Progressive Trance</span>&nbsp;&nbsp; <input type="text" name="search" class="search" /> <input type="submit" value="Play!" class="button" /></p>
+			</form>
+		</div>
+		
+		<div class="newsletter">
+			<p>Subscribe for Newsletter!</p>
+		</div>
+		
+		<div class="subheader">
+			<p><a href="#">Lorem ipsum dolor</a> sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex.</p>
+		</div>
+    <%= yield -%>		
+
+		<div class="right">
+			<div class="rt"></div>
+			<div class="right_articles">
+				<p><img src="assets/image.gif" alt="Image" title="Image" class="image" /><b>Lorem ipsum dolor sit amet</b><br />consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam <a href="#">erat volutpat</a>. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis <a href="#">nisl ut aliquip ex</a>.</p>
+			</div>
+			<div class="rt"></div>
+			<div class="right_articles">
+				<p><img src="assets/image.gif" alt="Image" title="Image" class="image" /><b>Lorem ipsum dolor sit amet</b><br />consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam <a href="#">erat volutpat</a>. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis <a href="#">nisl ut aliquip ex</a>.</p>
+			</div>
+			<div class="rt"></div>
+			<div class="right_articles">
+				<p><img src="assets/image.gif" alt="Image" title="Image" class="image" /><b>Lorem ipsum dolor sit amet</b><br />consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam <a href="#">erat volutpat</a>. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis <a href="#">nisl ut aliquip ex</a>.</p>
+			</div>
+		</div>	
+		<div class="footer">
+			<p><a href="#">RSS Feed</a> | <a href="#">Contact</a> | <a href="#">Accessibility</a> | <a href="#">Products</a> | <a href="#">Disclaimer</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> and <a href="http://validator.w3.org/check?uri=referer">XHTML</a><br />
+			&copy; Copyright 2006 Internet Music, Design: Luka Cvrk - <a href="http://www.solucija.com/" title="What's your solution?">Solucija</a></p>
+		</div>
+	</div>
+</body>
+</html>
