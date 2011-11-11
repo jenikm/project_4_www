@@ -116,13 +116,13 @@ input.login {
 
 .logo {
 	float: left;
-	width: 180px;
+	width: 130px;
 	padding: 10px 0 11px 10px;
 }
 
 .header_right {
 	float: right;
-	width: 550px;
+	width: 600px;
 	height: 72px;
 }
 
@@ -233,6 +233,7 @@ input.login {
 	.left_articles {
 		margin: 0 0 15px 0;
 		padding: 0 0 0 10px;
+    border-bottom: 1px dashed black;
 	}
 
 	.lt {

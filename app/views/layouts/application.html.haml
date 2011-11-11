@@ -1,0 +1,72 @@
+!!!
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title RadioGaGa
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    %meta{:content => "Eugene Magdel, Camillo Lugaressi, Joshua Herman", :name => "author"}/
+  %body
+    .content
+      .header_right
+        .top_info
+          .top_info_right
+            -#
+              %p
+                %b You are not Logged in!
+                %a{:href => "#"} Log in
+                or
+                %a{:href => "#"} register
+                to start downloading music!
+        .bar
+          %ul
+            %li.slogan Menu:
+            %li{:class => current_page?(:action => :index) ? :active : nil}= link_to_unless_current("Home", :action => :index)
+            %li{:class => current_page?(:action => :applet) ? :active : nil}= link_to_unless_current("Applet", :action => :applet)
+            %li{:class => current_page?(:action => :instructions) ? :active : nil}= link_to_unless_current("Instructions", :action => :instructions)
+            %li{:class => current_page?(:action => :download) ? :active : nil}= link_to_unless_current("Download", :action => :download)
+            %li{:class => current_page?(:action => :data_extraction) ? :active : nil}= link_to_unless_current("Data Extraction", :action => :data_extraction)
+            %li{:class => current_page?(:action => :observations) ? :active : nil}= link_to_unless_current("Observations", :action => :observations)
+      .logo
+        %h1
+          %a{:href => "#", :title => "The best music on the net!"}
+            Radio
+            %span.red GaGa
+        %p What shall we play today?
+      .search_field
+        = form_tag({:action => :find}, :method => :get) do
+          %p
+            %span.grey Search Example:
+            %span.search Progressive Trance
+            = text_field_tag :query, @query, :class => :search
+            = submit_tag :find, :class => :button
+      .newsletter
+        %p 
+      .subheader
+        %p
+          Target Launch date: 2011-11-21
+      = yield
+      .right
+        .rt
+        .right_articles
+          %p
+            = image_tag("image.gif", :class => "image")
+            %b FACT
+            %br Interesting facts about artist
+            %br
+            %br
+            %br
+      .footer
+        %p
+          %a{:href => "#"} Home
+          |
+          %a{:href => "#"} Instruction
+          |
+          %a{:href => "#"} Download
+          |
+          %a{:href => "#"} Applet
+          |
+          %a{:href => "#"} Data Extraction
+          |
+          %a{:href => "#"} Observations
+          %br © Copyright 2011 Radio GAGA
