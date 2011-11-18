@@ -50,6 +50,27 @@ RadioGaGa::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+
+  resources :artists do
+    resources :songs
+    resources :users
+    resources :favorite_artists
+  end
+
+  resources :favorite_artists, :track_plays
+  
+  resources :songs do
+    resources :artists
+    resources :users
+    resources :track_plays
+  end
+
+  resources :users
+
+  resources :countries do
+    resources :users
+  end
+
   root :to => "searches#index"
   match '/:action', :controller => "searches", :action => /index|download|preview|applet|data_extraction|observations|instructions/
 
