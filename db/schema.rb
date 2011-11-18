@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111117220627) do
+ActiveRecord::Schema.define(:version => 20111118080002) do
 
   create_table "artists", :force => true do |t|
     t.string "name"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20111117220627) do
     t.string   "user_reference"
   end
 
+  add_index "track_plays", ["played_at"], :name => "index_track_plays_on_played_at"
   add_index "track_plays", ["song_reference"], :name => "index_track_plays_on_song_reference"
   add_index "track_plays", ["user_reference"], :name => "index_track_plays_on_user_reference"
 
