@@ -2,9 +2,10 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
-  protected
-
+  protected 
   def filters(relation)
+
+=begin
     where_string = []
     where_params = []
     if params[:name]
@@ -54,6 +55,7 @@ class ApplicationController < ActionController::Base
       where_string << "gender = ?"
       where_params << User.gender_to_index(params[:gender])
     end
+=end
 
     #May cause problems with aggrigates
     limit = 100
@@ -79,7 +81,8 @@ class ApplicationController < ActionController::Base
     end
 
     includes = process_includes(params[:include]) 
-    conditions = [where_string.join(" AND "), *where_params]
+    #conditions = [where_string.join(" AND "), *where_params]
+    conditions = params[:where]
     relation.select(select).includes(includes).where(conditions).order(order).limit(limit).group(group).joins(joins)
   end
 

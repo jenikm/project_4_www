@@ -27637,3 +27637,743 @@ Started GET "/track_plays.json?select=count(1)&played_at_hour_min=2&played_at_ho
   Parameters: {"played_at_hour_max"=>"3", "played_at_hour_min"=>"2", "select"=>"count(1)"}
   [1m[35mTrackPlay Load (21156.3ms)[0m  SELECT count(1) FROM "track_plays" WHERE (date_part('hour', track_plays.played_at) >= '2' AND date_part('hour', track_plays.played_at) <= '3' ) LIMIT 100
 Completed 200 OK in 21164ms (Views: 1.2ms | ActiveRecord: 21158.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 18 20:22:40 -0600 2011
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (0.8ms)[0m  [1mSELECT "searches".* FROM "searches" [0m
+Rendered searches/index.html.haml within layouts/application (10.1ms)
+Compiled application.css  (38ms)  (pid 9469)
+Compiled artists.css  (18ms)  (pid 9469)
+Compiled favorite_artists.css  (3ms)  (pid 9469)
+Compiled songs.css  (1ms)  (pid 9469)
+Compiled style.css  (17ms)  (pid 9469)
+Compiled track_plays.css  (17ms)  (pid 9469)
+Compiled users.css  (1ms)  (pid 9469)
+Compiled application.js  (83ms)  (pid 9469)
+Compiled jquery.js  (29ms)  (pid 9469)
+Compiled jquery_ujs.js  (19ms)  (pid 9469)
+Compiled artists.js  (505ms)  (pid 9469)
+Compiled favorite_artists.js  (140ms)  (pid 9469)
+Compiled searches.js  (137ms)  (pid 9469)
+Compiled songs.js  (155ms)  (pid 9469)
+Compiled track_plays.js  (189ms)  (pid 9469)
+Compiled users.js  (121ms)  (pid 9469)
+Completed 200 OK in 2229ms (Views: 2226.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+  Processing by SearchesController#index as HTML
+  [1m[35mSearch Load (0.2ms)[0m  SELECT "searches".* FROM "searches" 
+Rendered searches/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 75ms (Views: 73.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/songs.css?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /songs.css - 304 Not Modified (78ms)
+
+
+Started GET "/assets/track_plays.css?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /track_plays.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/artists.css?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /artists.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/favorite_artists.css?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /favorite_artists.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /style.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/track_plays.js?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /track_plays.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/artists.js?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /artists.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/songs.js?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /songs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/favorite_artists.js?body=1" for 127.0.0.1 at Fri Nov 18 20:22:43 -0600 2011
+Served asset /favorite_artists.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/searches.js?body=1" for 127.0.0.1 at Fri Nov 18 20:22:44 -0600 2011
+Served asset /searches.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/dot.gif" for 127.0.0.1 at Fri Nov 18 20:22:44 -0600 2011
+Served asset /dot.gif - 304 Not Modified (40ms)
+
+
+Started GET "/assets/searchbg.gif" for 127.0.0.1 at Fri Nov 18 20:22:44 -0600 2011
+Served asset /searchbg.gif - 304 Not Modified (30ms)
+
+
+Started GET "/assets/button.gif" for 127.0.0.1 at Fri Nov 18 20:22:44 -0600 2011
+Served asset /button.gif - 304 Not Modified (5ms)
+
+
+Started GET "/assets/lt.gif" for 127.0.0.1 at Fri Nov 18 20:22:44 -0600 2011
+Served asset /lt.gif - 304 Not Modified (38ms)
+
+
+Started GET "/assets/newsletterbg.gif" for 127.0.0.1 at Fri Nov 18 20:22:44 -0600 2011
+Served asset /newsletterbg.gif - 304 Not Modified (5ms)
+
+
+Started GET "/assets/lb.gif" for 127.0.0.1 at Fri Nov 18 20:22:44 -0600 2011
+Served asset /lb.gif - 304 Not Modified (5ms)
+
+
+Started GET "/assets/sonia.jpg" for 127.0.0.1 at Fri Nov 18 20:22:44 -0600 2011
+Served asset /sonia.jpg - 304 Not Modified (34ms)
+
+
+Started GET "/assets/rt.gif" for 127.0.0.1 at Fri Nov 18 20:22:44 -0600 2011
+Served asset /rt.gif - 304 Not Modified (6ms)
+
+
+Started GET "/assets/rb.gif" for 127.0.0.1 at Fri Nov 18 20:22:44 -0600 2011
+Served asset /rb.gif - 304 Not Modified (5ms)
+
+
+Started GET "/assets/play.gif" for 127.0.0.1 at Fri Nov 18 20:22:44 -0600 2011
+Served asset /play.gif - 304 Not Modified (6ms)
+
+
+Started GET "/assets/image.gif" for 127.0.0.1 at Fri Nov 18 20:22:44 -0600 2011
+Served asset /image.gif - 304 Not Modified (8ms)
+
+
+Started GET "/assets/input.gif" for 127.0.0.1 at Fri Nov 18 20:22:44 -0600 2011
+Served asset /input.gif - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bar.gif" for 127.0.0.1 at Fri Nov 18 20:22:44 -0600 2011
+Served asset /bar.gif - 304 Not Modified (4ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 18 20:23:52 -0600 2011
+  Processing by SearchesController#index as HTML
+  [1m[36mSearch Load (1.7ms)[0m  [1mSELECT "searches".* FROM "searches" [0m
+Rendered searches/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 21.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/songs.css?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /songs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorite_artists.css?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /favorite_artists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/artists.css?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /artists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/track_plays.css?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /track_plays.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/artists.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /artists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorite_artists.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /favorite_artists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searches.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /searches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/songs.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /songs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/track_plays.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /track_plays.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dot.gif" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /dot.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/button.gif" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/input.gif" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /input.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lt.gif" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /lt.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searchbg.gif" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /searchbg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/newsletterbg.gif" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /newsletterbg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bar.gif" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /bar.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lb.gif" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /lb.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sonia.jpg" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /sonia.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/play.gif" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /play.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rt.gif" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /rt.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rb.gif" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /rb.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/image.gif" for 127.0.0.1 at Fri Nov 18 20:23:53 -0600 2011
+Served asset /image.gif - 304 Not Modified (0ms)
+
+
+Started GET "/?users" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+  Processing by SearchesController#index as HTML
+  Parameters: {"users"=>nil}
+  [1m[35mSearch Load (0.2ms)[0m  SELECT "searches".* FROM "searches" 
+Rendered searches/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/track_plays.css?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /track_plays.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/songs.css?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /songs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorite_artists.css?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /favorite_artists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/artists.css?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /artists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/artists.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /artists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorite_artists.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /favorite_artists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searches.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /searches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/songs.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /songs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/track_plays.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /track_plays.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dot.gif" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /dot.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/input.gif" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /input.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/button.gif" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bar.gif" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /bar.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searchbg.gif" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /searchbg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/newsletterbg.gif" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /newsletterbg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lt.gif" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /lt.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lb.gif" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /lb.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sonia.jpg" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /sonia.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/play.gif" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /play.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rt.gif" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /rt.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rb.gif" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /rb.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/image.gif" for 127.0.0.1 at Fri Nov 18 20:23:59 -0600 2011
+Served asset /image.gif - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Fri Nov 18 20:24:02 -0600 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (39.1ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 100[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 89ms (Views: 21.5ms | ActiveRecord: 42.9ms)
+
+
+Started GET "/favorite_artists" for 127.0.0.1 at Fri Nov 18 20:24:53 -0600 2011
+  Processing by FavoriteArtistsController#index as HTML
+  [1m[35mFavoriteArtist Load (24246.7ms)[0m  SELECT "favorite_artists".* FROM "favorite_artists" LIMIT 100
+Rendered text template (0.0ms)
+Completed 200 OK in 24278ms (Views: 4.0ms | ActiveRecord: 24250.4ms)
+
+
+Started GET "/favorite_artists?include=users" for 127.0.0.1 at Fri Nov 18 20:25:17 -0600 2011
+  Processing by FavoriteArtistsController#index as HTML
+  Parameters: {"include"=>"users"}
+  [1m[36mFavoriteArtist Load (0.7ms)[0m  [1mSELECT "favorite_artists".* FROM "favorite_artists" LIMIT 100[0m
+Completed 500 Internal Server Error in 48ms
+
+ActiveRecord::ConfigurationError (Association named 'users' was not found; perhaps you misspelled it?):
+  app/controllers/favorite_artists_controller.rb:11:in `index'
+  app/controllers/favorite_artists_controller.rb:9:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.7ms)
+
+
+Started GET "/favorite_artists?include=user" for 127.0.0.1 at Fri Nov 18 20:25:19 -0600 2011
+  Processing by FavoriteArtistsController#index as HTML
+  Parameters: {"include"=>"user"}
+  [1m[35mFavoriteArtist Load (0.6ms)[0m  SELECT "favorite_artists".* FROM "favorite_artists" LIMIT 100
+  [1m[36mUser Load (178.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."reference" IN ('00000c289a1829a808ac09c00daf10bc3c4e223b', '00001411dc427966b17297bf4d69e7e193135d89')[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 306ms (Views: 4.1ms | ActiveRecord: 187.4ms)
+
+
+Started GET "/favorite_artists?include=user&age=20" for 127.0.0.1 at Fri Nov 18 20:25:27 -0600 2011
+  Processing by FavoriteArtistsController#index as HTML
+  Parameters: {"include"=>"user", "age"=>"20"}
+  [1m[35mFavoriteArtist Load (0.6ms)[0m  SELECT "favorite_artists".* FROM "favorite_artists" LIMIT 100
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."reference" IN ('00000c289a1829a808ac09c00daf10bc3c4e223b', '00001411dc427966b17297bf4d69e7e193135d89')[0m
+Rendered text template (0.0ms)
+Completed 200 OK in 108ms (Views: 4.0ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/favorite_artists.json?include=user&age=20" for 127.0.0.1 at Fri Nov 18 20:25:42 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"include"=>"user", "age"=>"20"}
+  [1m[35mFavoriteArtist Load (0.6ms)[0m  SELECT "favorite_artists".* FROM "favorite_artists" LIMIT 100
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."reference" IN ('00000c289a1829a808ac09c00daf10bc3c4e223b', '00001411dc427966b17297bf4d69e7e193135d89')[0m
+Completed 200 OK in 159ms (Views: 1.2ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/favorite_artists.json?include=user&age=0" for 127.0.0.1 at Fri Nov 18 20:25:55 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"include"=>"user", "age"=>"0"}
+  [1m[35mFavoriteArtist Load (0.6ms)[0m  SELECT "favorite_artists".* FROM "favorite_artists" LIMIT 100
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."reference" IN ('00000c289a1829a808ac09c00daf10bc3c4e223b', '00001411dc427966b17297bf4d69e7e193135d89')[0m
+Completed 200 OK in 104ms (Views: 1.2ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/favorite_artists.json?include=user&age=0" for 127.0.0.1 at Fri Nov 18 20:25:58 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"include"=>"user", "age"=>"0"}
+  [1m[35mFavoriteArtist Load (0.9ms)[0m  SELECT "favorite_artists".* FROM "favorite_artists" LIMIT 100
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."reference" IN ('00000c289a1829a808ac09c00daf10bc3c4e223b', '00001411dc427966b17297bf4d69e7e193135d89')[0m
+Completed 200 OK in 104ms (Views: 1.2ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/favorite_artists.json?include=user&age=0" for 127.0.0.1 at Fri Nov 18 20:26:23 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"include"=>"user", "age"=>"0"}
+  [1m[35mFavoriteArtist Load (0.6ms)[0m  SELECT "favorite_artists".* FROM "favorite_artists" LIMIT 100
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."reference" IN ('00000c289a1829a808ac09c00daf10bc3c4e223b', '00001411dc427966b17297bf4d69e7e193135d89')[0m
+Completed 200 OK in 158ms (Views: 1.1ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/favorite_artists.json?include=user&age=0" for 127.0.0.1 at Fri Nov 18 20:27:04 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"include"=>"user", "age"=>"0"}
+  [1m[35mFavoriteArtist Load (1.1ms)[0m  SELECT "favorite_artists".* FROM "favorite_artists" LIMIT 100
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."reference" IN ('00000c289a1829a808ac09c00daf10bc3c4e223b', '00001411dc427966b17297bf4d69e7e193135d89')[0m
+Completed 200 OK in 161ms (Views: 1.1ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/favorite_artists.json?include=user&min_age=0&max_age=0" for 127.0.0.1 at Fri Nov 18 20:27:34 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"min_age"=>"0", "include"=>"user", "max_age"=>"0"}
+  [1m[35mFavoriteArtist Load (35.2ms)[0m  SELECT "favorite_artists".* FROM "favorite_artists" WHERE (age >= '0' AND age <= '0') LIMIT 100
+PGError: ERROR:  column "age" does not exist
+LINE 1: ...vorite_artists".* FROM "favorite_artists"  WHERE (age >= '0'...
+                                                             ^
+: SELECT  "favorite_artists".* FROM "favorite_artists"  WHERE (age >= '0' AND age <= '0') LIMIT 100
+Completed 500 Internal Server Error in 39ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  column "age" does not exist
+LINE 1: ...vorite_artists".* FROM "favorite_artists"  WHERE (age >= '0'...
+                                                             ^
+: SELECT  "favorite_artists".* FROM "favorite_artists"  WHERE (age >= '0' AND age <= '0') LIMIT 100):
+  app/controllers/favorite_artists_controller.rb:14:in `index'
+  app/controllers/favorite_artists_controller.rb:9:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.4ms)
+
+
+Started GET "/favorite_artists.json?include=user&min_age=0&max_age=0" for 127.0.0.1 at Fri Nov 18 20:27:51 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"min_age"=>"0", "include"=>"user", "max_age"=>"0"}
+  [1m[36mFavoriteArtist Load (0.3ms)[0m  [1mSELECT "favorite_artists".* FROM "favorite_artists" WHERE (age >= '0' AND age <= '0') LIMIT 100[0m
+PGError: ERROR:  column "age" does not exist
+LINE 1: ...vorite_artists".* FROM "favorite_artists"  WHERE (age >= '0'...
+                                                             ^
+: SELECT  "favorite_artists".* FROM "favorite_artists"  WHERE (age >= '0' AND age <= '0') LIMIT 100
+Completed 500 Internal Server Error in 3ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  column "age" does not exist
+LINE 1: ...vorite_artists".* FROM "favorite_artists"  WHERE (age >= '0'...
+                                                             ^
+: SELECT  "favorite_artists".* FROM "favorite_artists"  WHERE (age >= '0' AND age <= '0') LIMIT 100):
+  app/controllers/favorite_artists_controller.rb:14:in `index'
+  app/controllers/favorite_artists_controller.rb:9:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.5ms)
+
+
+Started GET "/favorite_artists.json?include=user&min_age=0&max_age=0" for 127.0.0.1 at Fri Nov 18 20:28:08 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"min_age"=>"0", "include"=>"user", "max_age"=>"0"}
+  [1m[35mSQL (166.9ms)[0m  SELECT "favorite_artists"."id" AS t0_r0, "favorite_artists"."user_reference" AS t0_r1, "favorite_artists"."artist_reference" AS t0_r2, "favorite_artists"."play_count" AS t0_r3, "favorite_artists"."created_at" AS t0_r4, "favorite_artists"."updated_at" AS t0_r5, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."reference" AS t1_r2, "users"."gender" AS t1_r3, "users"."age" AS t1_r4, "users"."country_id" AS t1_r5, "users"."registered_at" AS t1_r6 FROM "favorite_artists" LEFT OUTER JOIN "users" ON "users"."reference" = "favorite_artists"."user_reference" WHERE (users.age >= '0' AND users.age <= '0') LIMIT 100
+Completed 200 OK in 350ms (Views: 1.1ms | ActiveRecord: 172.2ms)
+
+
+Started GET "/favorite_artists.json?include=user&min_age=0&max_age=0" for 127.0.0.1 at Fri Nov 18 20:30:01 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"min_age"=>"0", "include"=>"user", "max_age"=>"0"}
+  [1m[36mFavoriteArtist Load (0.6ms)[0m  [1mSELECT "favorite_artists".* FROM "favorite_artists" LIMIT 100[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."reference" IN ('00000c289a1829a808ac09c00daf10bc3c4e223b', '00001411dc427966b17297bf4d69e7e193135d89')
+Completed 200 OK in 103ms (Views: 1.1ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/favorite_artists.json?include=user&where=users.age=22" for 127.0.0.1 at Fri Nov 18 20:30:19 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"include"=>"user", "where"=>"users.age=22"}
+  [1m[36mSQL (2.8ms)[0m  [1mSELECT "favorite_artists"."id" AS t0_r0, "favorite_artists"."user_reference" AS t0_r1, "favorite_artists"."artist_reference" AS t0_r2, "favorite_artists"."play_count" AS t0_r3, "favorite_artists"."created_at" AS t0_r4, "favorite_artists"."updated_at" AS t0_r5, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."reference" AS t1_r2, "users"."gender" AS t1_r3, "users"."age" AS t1_r4, "users"."country_id" AS t1_r5, "users"."registered_at" AS t1_r6 FROM "favorite_artists" LEFT OUTER JOIN "users" ON "users"."reference" = "favorite_artists"."user_reference" WHERE (users.age=22) LIMIT 100[0m
+Completed 200 OK in 168ms (Views: 1.1ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/favorite_artists.json?include=user&where=users.age=21" for 127.0.0.1 at Fri Nov 18 20:30:22 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"include"=>"user", "where"=>"users.age=21"}
+  [1m[35mSQL (55.7ms)[0m  SELECT "favorite_artists"."id" AS t0_r0, "favorite_artists"."user_reference" AS t0_r1, "favorite_artists"."artist_reference" AS t0_r2, "favorite_artists"."play_count" AS t0_r3, "favorite_artists"."created_at" AS t0_r4, "favorite_artists"."updated_at" AS t0_r5, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."reference" AS t1_r2, "users"."gender" AS t1_r3, "users"."age" AS t1_r4, "users"."country_id" AS t1_r5, "users"."registered_at" AS t1_r6 FROM "favorite_artists" LEFT OUTER JOIN "users" ON "users"."reference" = "favorite_artists"."user_reference" WHERE (users.age=21) LIMIT 100
+Completed 200 OK in 221ms (Views: 1.1ms | ActiveRecord: 61.0ms)
+
+
+Started GET "/favorite_artists.json?include=user&where=users.age=21" for 127.0.0.1 at Fri Nov 18 20:37:12 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"include"=>"user", "where"=>"users.age=21"}
+  [1m[36mSQL (3.1ms)[0m  [1mSELECT "favorite_artists"."id" AS t0_r0, "favorite_artists"."user_reference" AS t0_r1, "favorite_artists"."artist_reference" AS t0_r2, "favorite_artists"."play_count" AS t0_r3, "favorite_artists"."created_at" AS t0_r4, "favorite_artists"."updated_at" AS t0_r5, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."reference" AS t1_r2, "users"."gender" AS t1_r3, "users"."age" AS t1_r4, "users"."country_id" AS t1_r5, "users"."registered_at" AS t1_r6 FROM "favorite_artists" LEFT OUTER JOIN "users" ON "users"."reference" = "favorite_artists"."user_reference" WHERE (users.age=21) LIMIT 100[0m
+Completed 200 OK in 168ms (Views: 1.2ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/favorite_artists.json?include=user&where=users.age%20betwee%2021%20and%2025" for 127.0.0.1 at Fri Nov 18 20:37:31 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"include"=>"user", "where"=>"users.age betwee 21 and 25"}
+  [1m[35mSQL (0.5ms)[0m  SELECT "favorite_artists"."id" AS t0_r0, "favorite_artists"."user_reference" AS t0_r1, "favorite_artists"."artist_reference" AS t0_r2, "favorite_artists"."play_count" AS t0_r3, "favorite_artists"."created_at" AS t0_r4, "favorite_artists"."updated_at" AS t0_r5, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."reference" AS t1_r2, "users"."gender" AS t1_r3, "users"."age" AS t1_r4, "users"."country_id" AS t1_r5, "users"."registered_at" AS t1_r6 FROM "favorite_artists" LEFT OUTER JOIN "users" ON "users"."reference" = "favorite_artists"."user_reference" WHERE (users.age betwee 21 and 25) LIMIT 100
+PGError: ERROR:  syntax error at or near "betwee"
+LINE 1: ...vorite_artists"."user_reference" WHERE (users.age betwee 21 ...
+                                                             ^
+: SELECT  "favorite_artists"."id" AS t0_r0, "favorite_artists"."user_reference" AS t0_r1, "favorite_artists"."artist_reference" AS t0_r2, "favorite_artists"."play_count" AS t0_r3, "favorite_artists"."created_at" AS t0_r4, "favorite_artists"."updated_at" AS t0_r5, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."reference" AS t1_r2, "users"."gender" AS t1_r3, "users"."age" AS t1_r4, "users"."country_id" AS t1_r5, "users"."registered_at" AS t1_r6 FROM "favorite_artists" LEFT OUTER JOIN "users" ON "users"."reference" = "favorite_artists"."user_reference" WHERE (users.age betwee 21 and 25) LIMIT 100
+Completed 500 Internal Server Error in 22ms
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  syntax error at or near "betwee"
+LINE 1: ...vorite_artists"."user_reference" WHERE (users.age betwee 21 ...
+                                                             ^
+: SELECT  "favorite_artists"."id" AS t0_r0, "favorite_artists"."user_reference" AS t0_r1, "favorite_artists"."artist_reference" AS t0_r2, "favorite_artists"."play_count" AS t0_r3, "favorite_artists"."created_at" AS t0_r4, "favorite_artists"."updated_at" AS t0_r5, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."reference" AS t1_r2, "users"."gender" AS t1_r3, "users"."age" AS t1_r4, "users"."country_id" AS t1_r5, "users"."registered_at" AS t1_r6 FROM "favorite_artists" LEFT OUTER JOIN "users" ON "users"."reference" = "favorite_artists"."user_reference" WHERE (users.age betwee 21 and 25) LIMIT 100):
+  app/controllers/favorite_artists_controller.rb:14:in `index'
+  app/controllers/favorite_artists_controller.rb:9:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.5ms)
+
+
+Started GET "/favorite_artists.json?include=user&where=users.age%20between%2021%20and%2025" for 127.0.0.1 at Fri Nov 18 20:37:38 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"include"=>"user", "where"=>"users.age between 21 and 25"}
+  [1m[36mSQL (2.8ms)[0m  [1mSELECT "favorite_artists"."id" AS t0_r0, "favorite_artists"."user_reference" AS t0_r1, "favorite_artists"."artist_reference" AS t0_r2, "favorite_artists"."play_count" AS t0_r3, "favorite_artists"."created_at" AS t0_r4, "favorite_artists"."updated_at" AS t0_r5, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."reference" AS t1_r2, "users"."gender" AS t1_r3, "users"."age" AS t1_r4, "users"."country_id" AS t1_r5, "users"."registered_at" AS t1_r6 FROM "favorite_artists" LEFT OUTER JOIN "users" ON "users"."reference" = "favorite_artists"."user_reference" WHERE (users.age between 21 and 25) LIMIT 100[0m
+Completed 200 OK in 165ms (Views: 1.1ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/favorite_artists.json?include=user&where=users.age%20between%2021%20and%2025" for 127.0.0.1 at Fri Nov 18 20:40:44 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"include"=>"user", "where"=>"users.age between 21 and 25"}
+  [1m[35mSQL (3.2ms)[0m  SELECT "favorite_artists"."id" AS t0_r0, "favorite_artists"."user_reference" AS t0_r1, "favorite_artists"."artist_reference" AS t0_r2, "favorite_artists"."play_count" AS t0_r3, "favorite_artists"."created_at" AS t0_r4, "favorite_artists"."updated_at" AS t0_r5, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."reference" AS t1_r2, "users"."gender" AS t1_r3, "users"."age" AS t1_r4, "users"."country_id" AS t1_r5, "users"."registered_at" AS t1_r6 FROM "favorite_artists" LEFT OUTER JOIN "users" ON "users"."reference" = "favorite_artists"."user_reference" WHERE (users.age between 21 and 25) LIMIT 100
+Completed 200 OK in 167ms (Views: 1.1ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/favorite_artists.json?include=user&where=users.age%20between%2021%20and%2025" for 127.0.0.1 at Fri Nov 18 20:44:26 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"include"=>"user", "where"=>"users.age between 21 and 25"}
+Completed 500 Internal Server Error in 166ms
+
+NameError (undefined local variable or method `conditions' for #<FavoriteArtistsController:0xaacce5c>):
+  app/controllers/application_controller.rb:86:in `filters'
+  app/controllers/favorite_artists_controller.rb:7:in `index'
+
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /usr/local/lib/ruby/gems/1.8/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (114.0ms)
+
+
+Started GET "/favorite_artists.json?include=user&where=users.age%20between%2021%20and%2025" for 127.0.0.1 at Fri Nov 18 20:44:33 -0600 2011
+  Processing by FavoriteArtistsController#index as JSON
+  Parameters: {"include"=>"user", "where"=>"users.age between 21 and 25"}
+  [1m[36mSQL (2.7ms)[0m  [1mSELECT "favorite_artists"."id" AS t0_r0, "favorite_artists"."user_reference" AS t0_r1, "favorite_artists"."artist_reference" AS t0_r2, "favorite_artists"."play_count" AS t0_r3, "favorite_artists"."created_at" AS t0_r4, "favorite_artists"."updated_at" AS t0_r5, "users"."id" AS t1_r0, "users"."name" AS t1_r1, "users"."reference" AS t1_r2, "users"."gender" AS t1_r3, "users"."age" AS t1_r4, "users"."country_id" AS t1_r5, "users"."registered_at" AS t1_r6 FROM "favorite_artists" LEFT OUTER JOIN "users" ON "users"."reference" = "favorite_artists"."user_reference" WHERE (users.age between 21 and 25) LIMIT 100[0m
+Completed 200 OK in 110ms (Views: 1.1ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+  Processing by SearchesController#index as HTML
+  [1m[35mSearch Load (0.3ms)[0m  SELECT "searches".* FROM "searches" 
+Rendered searches/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 56ms (Views: 45.1ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/artists.css?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /artists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorite_artists.css?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /favorite_artists.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/songs.css?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /songs.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/track_plays.css?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /track_plays.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/artists.js?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /artists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favorite_artists.js?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /favorite_artists.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searches.js?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /searches.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/songs.js?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /songs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/track_plays.js?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /track_plays.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Fri Nov 18 21:05:02 -0600 2011
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dot.gif" for 127.0.0.1 at Fri Nov 18 21:05:03 -0600 2011
+Served asset /dot.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bar.gif" for 127.0.0.1 at Fri Nov 18 21:05:03 -0600 2011
+Served asset /bar.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searchbg.gif" for 127.0.0.1 at Fri Nov 18 21:05:03 -0600 2011
+Served asset /searchbg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/input.gif" for 127.0.0.1 at Fri Nov 18 21:05:03 -0600 2011
+Served asset /input.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/button.gif" for 127.0.0.1 at Fri Nov 18 21:05:03 -0600 2011
+Served asset /button.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/newsletterbg.gif" for 127.0.0.1 at Fri Nov 18 21:05:03 -0600 2011
+Served asset /newsletterbg.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lt.gif" for 127.0.0.1 at Fri Nov 18 21:05:03 -0600 2011
+Served asset /lt.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lb.gif" for 127.0.0.1 at Fri Nov 18 21:05:03 -0600 2011
+Served asset /lb.gif - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sonia.jpg" for 127.0.0.1 at Fri Nov 18 21:05:03 -0600 2011
+Served asset /sonia.jpg - 304 Not Modified (0ms)
+
+
+Started GET "/assets/play.gif" for 127.0.0.1 at Fri Nov 18 21:05:03 -0600 2011
+Served asset /play.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rt.gif" for 127.0.0.1 at Fri Nov 18 21:05:03 -0600 2011
+Served asset /rt.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rb.gif" for 127.0.0.1 at Fri Nov 18 21:05:03 -0600 2011
+Served asset /rb.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/image.gif" for 127.0.0.1 at Fri Nov 18 21:05:03 -0600 2011
+Served asset /image.gif - 304 Not Modified (0ms)
