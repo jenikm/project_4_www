@@ -2,13 +2,6 @@ class SearchesController < ApplicationController
   # GET /searches
   # GET /searches.json
   def index
-    @searches = Search.all
-  end
-
-  def ndex 
-  end
-
-  def ownload 
   end
 
   def review 
