@@ -1,11 +1,12 @@
 class TopArtistsController < ApplicationController
 
 	def index
+		table = 'top_artists2_no_age'
 		query = <<-EOS
 select id, mbid, name, plays
 from artists
 join (select artist_id, sum(plays) as plays
-from top_artists
+from #{table}
 EOS
 		where = []
 		if params[:gender]
