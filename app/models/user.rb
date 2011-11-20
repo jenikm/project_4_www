@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
   has_many :countries
-  has_many :favorite_artists, :primary_key => :reference, :foreign_key => :user_reference
-  has_many :track_plays, :primary_key => :reference, :foreign_key => :user_reference
+  has_many :user_artists
   has_one :country
-  has_many :artists, :through => :favorite_artists
+  has_many :artists, :through => :user_artists
+  has_many :songs, :through => :artists
 
   MALE   = 0.freeze
   FEMALE = 1.freeze
