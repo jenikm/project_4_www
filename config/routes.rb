@@ -75,7 +75,7 @@ RadioGaGa::Application.routes.draw do
   end
 
   root :to => "searches#index"
-  match '/:action', :controller => "searches", :action => /index|download|preview|applet|data_extraction|observations|instructions/
+  match '/:action', :controller => "searches", :action => /index|download|preview|applet|data_extraction|observations|instructions|test/
 
 
   match 'top_artists', :to => 'top_artists#index'

@@ -19,6 +19,12 @@ class SearchesController < ApplicationController
   def instructions
   end
 
+  def test
+    @@x||=0
+    @@x+=1
+    render :text => @@x.to_s
+  end
+
   def find
     @query = params[:query]
     render :text => "Not Implemented", :layout => true
