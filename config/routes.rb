@@ -74,6 +74,9 @@ RadioGaGa::Application.routes.draw do
   root :to => "searches#index"
   match '/:action', :controller => "searches", :action => /index|download|preview|applet|data_extraction|observations|instructions/
 
+
+  match 'top_artists', :to => 'top_artists#index'
+
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
