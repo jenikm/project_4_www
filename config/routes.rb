@@ -55,6 +55,9 @@ RadioGaGa::Application.routes.draw do
     resources :songs
     resources :users
     resources :favorite_artists
+    collection do
+      get 'top'
+    end
   end
 
   resources :favorite_artists, :track_plays

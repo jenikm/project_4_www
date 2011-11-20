@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  played_at: 2011-11-13 17:33:39
-  song_id: 1
-
-two:
-  played_at: 2011-11-13 17:33:39
-  song_id: 1

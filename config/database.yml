@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-  database: lastfm
+  database: cs424p4
   username: lastfm
   password: lastfm
   pool: 5
