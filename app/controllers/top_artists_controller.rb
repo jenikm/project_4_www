@@ -2,9 +2,17 @@ class TopArtistsController < ApplicationController
 
 	def index
 		if params[:ageMin] or params[:ageMax]
-			table = 'top_artists2_no_country'
+			if params[:country]
+				table = 'top_artists2'
+			else
+				table = 'top_artists2_no_country'
+			end
 		else
-			table = 'top_artists2_no_age'
+			if params[:country]
+				table = 'top_artists2_no_age'
+			else
+				table = 'top_artists2_no_age_no_country'
+			end
 		end
 		query = <<-EOS
 select id, mbid, name, plays
