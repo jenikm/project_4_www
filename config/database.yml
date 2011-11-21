@@ -6,8 +6,8 @@
 development:
   adapter: postgresql
   database: cs424p4
-  username: lastfm
-  password: lastfm
+  username: cs424p4
+  password: 
   pool: 5
   timeout: 5000
 
