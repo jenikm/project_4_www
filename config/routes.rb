@@ -56,6 +56,7 @@ RadioGaGa::Application.routes.draw do
     resources :users do
       collection do
         get 'gender_stats'
+        get 'age_stats'
       end
     end
     resources :favorite_artists
