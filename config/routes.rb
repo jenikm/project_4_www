@@ -53,7 +53,11 @@ RadioGaGa::Application.routes.draw do
 
   resources :artists do
     resources :songs
-    resources :users
+    resources :users do
+      collection do
+        get 'gender_stats'
+      end
+    end
     resources :favorite_artists
     collection do
       get 'top'

@@ -19,6 +19,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def gender_stats
+    @artist = Artist.find(params[:artist_id])
+    genders = @artist.users.select("gender, count(1)").group("gender")
+    respond_to do |format|
+      format.html{
+        render :text => genders.to_html
+      }
+      format.json{
+        render :json => genders
+      }
+    end
+  end
+
   def show
     @user = User.find(params[:id])   
     respond_to do |format|
