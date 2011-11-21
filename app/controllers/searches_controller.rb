@@ -20,9 +20,15 @@ class SearchesController < ApplicationController
   end
 
   def test
-    @@x||=0
-    @@x+=1
-    render :text => @@x.to_s
+    if params[:key]
+      x = Rails.cache.read(params[:key])
+      x ||=0
+      x+=1
+      Rails.cache.write(params[:key], x)
+      render :text => x
+    else
+      render :text => "NOTHING"
+    end
   end
 
   def find
