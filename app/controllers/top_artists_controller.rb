@@ -22,6 +22,7 @@ EOS
 		end
 		where << "age >= #{params[:ageMin]}" if params[:ageMin]
 		where << "age <= #{params[:ageMax]}" if params[:ageMax]
+		where << "country_id = #{params[:country]}" if params[:country]
 		
 		if where.length > 0
 			query << <<-EOS
