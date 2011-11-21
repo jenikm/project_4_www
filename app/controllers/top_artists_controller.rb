@@ -1,7 +1,11 @@
 class TopArtistsController < ApplicationController
 
 	def index
-		table = 'top_artists2_no_age'
+		if params[:ageMin] or params[:ageMax]
+			table = 'top_artists2_no_country'
+		else
+			table = 'top_artists2_no_age'
+		end
 		query = <<-EOS
 select id, mbid, name, plays
 from artists
@@ -10,14 +14,18 @@ from #{table}
 EOS
 		where = []
 		if params[:gender]
-			where << "gender = 'm'" if params[:gender].index('m')
-			where << "gender = 'f'" if params[:gender].index('f')
-			where << "gender is null" if params[:gender].index('u')
+			genderClauses = []
+			genderClauses << "gender = 'm'" if params[:gender].index('m')
+			genderClauses << "gender = 'f'" if params[:gender].index('f')
+			genderClauses << "gender is null" if params[:gender].index('u')
+			where << '(' + genderClauses.join(' or ') + ')'
 		end
+		where << "age >= #{params[:ageMin]}" if params[:ageMin]
+		where << "age <= #{params[:ageMax]}" if params[:ageMax]
 		
 		if where.length > 0
 			query << <<-EOS
-where #{where.join(' or ')}
+where #{where.join(' and ')}
 EOS
 		end
 		query << <<-EOS
